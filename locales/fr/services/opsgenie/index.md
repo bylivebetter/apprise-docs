@@ -20,6 +20,13 @@ limits:
   max_chars: 15000
 ---
 
+:::note[Retrait prochain du service]
+Atlassian a cessé les nouvelles ventes d'Opsgenie le 4 juin 2025 et mettra fin
+au support le 5 avril 2027. Opsgenie reste disponible dans Apprise tant que le
+service fonctionne. Pour une nouvelle configuration ou une migration, consultez
+[`jira://`](/services/jira/) et le [guide de migration officiel d'Atlassian](https://support.atlassian.com/jira-service-management-cloud/docs/merge-opsgenie-with-jira-service-management/).
+:::
+
 <!-- SPONSORS:BANNER -->
 <!-- SERVICE:DETAILS -->
 
@@ -30,9 +37,6 @@ limits:
 
 :::note
 Vous devez generer une cle API d'integration ; elle ne doit pas etre confondue avec la cle API de gestion Opsgenie.
-:::
-:::caution
-Opsgenie est en cours d'abandon par Atlassian. Envisagez une migration vers [Jira Service Management](../jira/), qui fournit la meme fonctionnalite. Consultez le [guide de migration Atlassian](https://support.atlassian.com/jira-service-management-cloud/docs/merge-opsgenie-with-jira-service-management/) pour les details.
 :::
 
 ## Syntaxe

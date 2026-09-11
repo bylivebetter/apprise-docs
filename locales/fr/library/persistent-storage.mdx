@@ -320,13 +320,15 @@ Aucune gestion d'erreur côté plugin n'est requise.
 
 Les plugins principaux suivants l'utilisent déjà :
 
+- [**Jira**](https://github.com/caronc/apprise/blob/master/apprise/plugins/jira.py) : met en cache les identifiants d'alerte afin que les actions `acknowledge`, `close`, `note` et `delete` retrouvent les alertes existantes sans redemander leur identifiant.
+
 - [**Matrix**](https://github.com/caronc/apprise/blob/master/apprise/plugins/matrix.py) : met en cache les métadonnées de session et de découverte Matrix, y compris `access_token`, `home_server` et `user_id` obtenus lors de la connexion ou de l'inscription. Il stocke aussi un `transaction_id` pour éviter le traitement en double des messages, met en cache les résultats de résolution d'alias de salon et persiste les résultats de découverte `.well-known`. Cela évite des réauthentifications, découvertes et résolutions répétées d'une exécution à l'autre.
 
 - [**Nextcloud**](https://github.com/caronc/apprise/blob/master/apprise/plugins/nextcloud.py) : met en cache les résultats de découverte de destinataires. La résolution des noms de groupe et des recherches « tous les utilisateurs » est mise en cache pour éviter des appels API répétés lorsque les mêmes groupes sont fréquemment référencés. La durée de vie du cache est contrôlée par la configuration du plugin.
 
 - [**Office365**](https://github.com/caronc/apprise/blob/master/apprise/plugins/office365.py) : met en cache les métadonnées d'identité d'expéditeur résolues. Lorsque l'expéditeur configuré n'est pas une adresse email pleinement qualifiée, le plugin résout la bonne adresse `from` et le nom d'affichage via Microsoft Graph puis conserve le résultat pour les envois suivants.
 
-- [**Opsgenie**](https://github.com/caronc/apprise/blob/master/apprise/plugins/opsgenie.py) : met en cache les identifiants de requête d'alerte retournés lors de la création d'alertes. Ces identifiants sont indexés sous une clé stable dérivée et conservés longtemps, permettant à des actions de suivi comme acknowledge, close, note ou delete d'agir sur des alertes déjà créées sans demander à l'utilisateur de fournir à nouveau l'ID.
+- [**Opsgenie**](https://github.com/caronc/apprise/blob/master/apprise/plugins/opsgenie.py) : met en cache les identifiants d'alerte afin que les actions `acknowledge`, `close`, `note` et `delete` retrouvent les alertes existantes sans redemander leur identifiant.
 
 - [**SendPulse**](https://github.com/caronc/apprise/blob/master/apprise/plugins/sendpulse.py) : met en cache des jetons d'accès OAuth. Les jetons sont stockés avec une expiration dérivée de la valeur amont `expires_in` (avec une marge de sécurité), permettant aux notifications suivantes de les réutiliser et d'éviter des réauthentifications inutiles.
 

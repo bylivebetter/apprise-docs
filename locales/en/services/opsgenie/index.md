@@ -20,6 +20,13 @@ limits:
   max_chars: 15000
 ---
 
+:::note[Upcoming Service Retirement]
+Atlassian ended new Opsgenie sales on June 4, 2025, and will end support on
+April 5, 2027. Opsgenie remains available in Apprise while the service operates.
+For new setups or migrations, see [`jira://`](/services/jira/) and Atlassian's
+[official migration guide](https://support.atlassian.com/jira-service-management-cloud/docs/merge-opsgenie-with-jira-service-management/).
+:::
+
 <!-- SPONSORS:BANNER -->
 <!-- SERVICE:DETAILS -->
 
@@ -30,10 +37,6 @@ limits:
 
 :::note
 You must generate an Integration API Key; this is not to be confused with the Opsgenie Management API Key.
-:::
-
-:::caution
-Opsgenie is being retired by Atlassian. Consider migrating to [Jira Service Management](../jira/) which provides the same functionality. See the [Atlassian migration guide](https://support.atlassian.com/jira-service-management-cloud/docs/merge-opsgenie-with-jira-service-management/) for details.
 :::
 
 ## Syntax
